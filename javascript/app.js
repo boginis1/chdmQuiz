@@ -85,7 +85,7 @@ $(document).ready(function() {
         $("#startGame").hide();
         $("#response").hide();
         $(".grid").show();
-        interValID = setInterval(timeIt, 1000);
+        interValID = setInterval(timeIt, 500);
         selection = triviaQandA[questionIndex];
         $("#question").html(selection.question);
         console.log(question);
@@ -135,8 +135,9 @@ $(document).ready(function() {
     function showResults() {
         $(".grid").hide();
         $("#results").show();
-        $("#results").html("# of Correct Answers = " + correctAnswer + " | " + "# of Incorrect Answers = " + wrongAnswer + " | " + "  # of Timed Out = " + timeOutAnswer);
-        
+        $("#results").html("# of Correct Answers = " + correctAnswer + " | " + "# of Incorrect Answers = " + 
+            wrongAnswer + " | " + "  # of Timed Out = " + timeOutAnswer );
+        $("#resultsTwo").show();
     }
 
     function checkEnd() {

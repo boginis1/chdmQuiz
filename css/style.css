@@ -79,6 +79,18 @@ padding: 10px;
   box-shadow: 0 10 15 5 #cbcbcb;
   font-size: 25px;
 }
+#resultsTwo {
+  background-color: ##808080;
+  display:none;
+  margin: 0 auto;
+  text-align: center;
+  width:900px;
+  padding: 10px 50px 50px 50px;
+  border-radius: 70px;
+  border: 2px solid #cbcbcb;
+  box-shadow: 0 10 15 5 #cbcbcb;
+  font-size: 25px;
+}
 #response {
   display:none;
   margin: 0 auto;
