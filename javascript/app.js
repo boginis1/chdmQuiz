@@ -85,7 +85,7 @@ $(document).ready(function() {
         $("#startGame").hide();
         $("#response").hide();
         $(".grid").show();
-        interValID = setInterval(timeIt, 500);
+        interValID = setInterval(timeIt, 1000);
         selection = triviaQandA[questionIndex];
         $("#question").html(selection.question);
         console.log(question);
@@ -148,7 +148,7 @@ $(document).ready(function() {
             } else  {
                 counter=0;
                 
-                setTimeout(getQuestion, 4000);
+                setTimeout(getQuestion, 3000);
 
             }
     }
