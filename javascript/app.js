@@ -53,9 +53,9 @@ $(document).ready(function() {
 
     function timeIt() {
         
-        timer.html("<h3>You have " + (timeLeft - counter) + " seconds left</h3>");
+        timer.html("<h2>You have " + (timeLeft - counter) + " seconds left</h2>");
         if (counter == timeLeft) {
-            timer.html("<h3>Your time is up!</h3>");
+            timer.html("<h2>Your time is up!</h2>");
             clearInterval(interValID);
             $("#response").show();
             $("#response").html("You ran out of time. " + selection.response);
