@@ -40,9 +40,8 @@ body {
    text-align: center;
    background-color: #663399;
    margin:auto;
-   padding:10px;
-   width: 80%;
-   font-size: 30px:;
+   padding:5px;
+   width: 60%;
    font-style: bold;
    border-radius: 70px;
  }
@@ -52,27 +51,28 @@ margin: 0 auto;
 background-color: #663399;
 border-radius: 40px;
 text-align: center;
-font-size: 30px;
-width: 80%;
-height:200px;
-padding: 10px;
+font-size: 25px;
+width: 75%;
+height:250px;
+padding: 20px;
 }
 
 .grid {
   display:none;
   margin: 0 auto;
   width:80%;
-  padding: 10px 50px 50px 50px;
+  padding: 10px 10px 10px 10px;
   border-radius: 70px;
-  border: 10px solid   #808080;
+  border: 15px solid   #808080;
   box-shadow: 0 10 45 5   #808080;
 
 }
-#results {
+#resultsCorrect, #resultsIncorrect, #resultsTimedOut {
   background-color: #663399;
   display:none;
+  text-align: center;
   margin: 0 auto;
-  width:80%;
+  width:30%;
   padding: 10px 50px 50px 50px;
   border-radius: 70px;
   border: 2px solid #cbcbcb;
@@ -84,12 +84,12 @@ padding: 10px;
   display:none;
   margin: 0 auto;
   text-align: center;
-  width:80%;
-  padding: 10px 50px 50px 50px;
+  width:60%;
+  padding: 10px 10px 10px 10px;
   border-radius: 70px;
   border: 2px solid #cbcbcb;
   box-shadow: 0 10 15 5 #cbcbcb;
-  font-size: 20px;
+  
 }
 #response {
   display:none;
@@ -102,12 +102,12 @@ padding: 10px;
   font-size: 20px;
 }
  #question{
-  font-size: 30px;
+  font-size: 25px;
   background-color: #6B8E23 ;
    margin:auto;
    height:100px;
    padding:20px;
-   width: 100%;
+   width: 70%;
 }
 .button {
   

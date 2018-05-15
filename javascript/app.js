@@ -17,7 +17,7 @@ $(document).ready(function() {
         },
         {
 
-            "question": "Which of the following best describes “Earned Media?”?",
+            "question": "Which of the following best describes 'Earned Media'?",
             "answers": ["Includes your website", "Deemed by consumers as unbiased info", "It includes display advertising", "All of the above"],
             "correct": "Deemed by consumers as unbiased info",
             "response": "The value of this media is the consumers perception that the info is NOT driven by your marketing department."
@@ -53,14 +53,14 @@ $(document).ready(function() {
 
     function timeIt() {
         
-        timer.html("<h2>You have " + (timeLeft - counter) + " seconds left</h2>");
+        timer.html("<h3>You have " + (timeLeft - counter) + " seconds left</h3>");
         if (counter == timeLeft) {
-            timer.html("<h2>Your time is up!</h2>");
+            timer.html("<h3>Your time is up!</h3>");
             clearInterval(interValID);
             $("#response").show();
             $("#response").html("You ran out of time. " + selection.response);
             timeOutAnswer++;
-            checkEnd();
+            //checkEnd();
         }
         counter++
     }
@@ -134,17 +134,21 @@ $(document).ready(function() {
 
     function showResults() {
         $(".grid").hide();
-        $("#results").show();
-        $("#results").html("# of Correct Answers = " + correctAnswer + " | " + "# of Incorrect Answers = " + 
-            wrongAnswer + " | " + "  # of Timed Out = " + timeOutAnswer );
+        $("#resultsCorrect").show();
+        $("#resultsCorrect").html("# of Correct Answers = " + correctAnswer) 
+        $("#resultsIncorrect").show();
+        $("#resultsIncorrect").html("# of Incorrect Answers = " + 
+            wrongAnswer)
+        $("#resultsTimedOut").show();
+        $("#resultsTimedOut").html("# of Timed Out = " + timeOutAnswer );
         $("#resultsTwo").show();
     }
 
     function checkEnd() {
             questionIndex++;
             if (questionIndex === (triviaQandA.length)){
-
-            showResults();
+               
+            setTimeout(showResults, 3000);
             } else  {
                 counter=0;
                 
