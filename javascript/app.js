@@ -2,6 +2,7 @@ $(document).ready(function() {
     // Handler for .ready() called.
 
     var selection;
+    var percentScore;
 
     var triviaQandA = [{
             "question": "Make a website accessible to users with disabilities by including:",
@@ -133,6 +134,10 @@ $(document).ready(function() {
     }
 
     function showResults() {
+
+         var percentScore = (correctAnswer/triviaQandA.length)*100
+    
+
         $(".grid").hide();
         $("#resultsCorrect").show();
         $("#resultsCorrect").html("# of Correct Answers = " + correctAnswer) 
@@ -141,6 +146,20 @@ $(document).ready(function() {
             wrongAnswer)
         $("#resultsTimedOut").show();
         $("#resultsTimedOut").html("# of Timed Out = " + timeOutAnswer );
+        $("#resultsPercent").show();
+        $("#resultsPercent").html("Your score is " + percentScore + "%")
+      
+if (percentScore > 70) {
+    var wayToGo = $("<img/>");
+    wayToGo.attr("src", "images/tenorWayToGo.gif")
+    $("#scoreImg").show();
+    $("#scoreImg").append(wayToGo);
+} else {
+   var tryHarder = $("<img/>");
+    tryHarder.attr("src", "images/tenorTryHarder.gif")
+    $("#scoreImg").show();
+    $("#scoreImg").append(tryHarder);
+}
         $("#resultsTwo").show();
     }
 
